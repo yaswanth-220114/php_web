@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+
+    <div class="page">
+
+
+            <form onsubmit="saveData(event)">
+                <h2>Contact Us</h2>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+                <br><br>
+
+                <label>Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+                <br><br>
+                <label>Subject:</label>
+                <select id="subject">
+                    <option>Select a subject</option>
+                    <option>Order Related</option>
+                    <option>Customer Support</option>
+                    <option>Feedback</option>
+                    <option>Other</option>
+                </select>
+                <br><br>
+                <label>Message:</label>
+                <textarea  id="message" placeholder="Type your message here" required></textarea>
+                <br><br>
+                <input type="submit" value="Send Message">
+
+            </form>
+
+    </div>
+    <script>
+        function saveData(event) {
+            event.preventDefault();
+
+            // object 
+            let userData = {
+            fullName: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+            };
+
+            console.log(userData);
+        }
+
+    </script>
+
+</body>
+</html>
