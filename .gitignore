@@ -1,0 +1,7 @@
+.env
+/vendor/
+*.env.local
+credentials.json
+# Ignore node modules or other build artifacts if present
+node_modules/
+.DS_Store
